@@ -1,0 +1,358 @@
+{
+  "version": "failure-symptom-rules-v2.0.0",
+  "kind": "fixed_explainable_multilabel_symptom_rules",
+  "label_status": "weak_rule_based_pseudo_labels_not_expert_truth",
+  "mode_count": 23,
+  "modes": [
+    {
+      "mode": "engine_stall",
+      "description": "Engine/vehicle stalls or stops running unexpectedly.",
+      "triggers": [
+        "stall",
+        "shut",
+        "died",
+        "cut out",
+        "cuts out",
+        "stopped running"
+      ],
+      "patterns": [
+        "\\bstall(?:ed|ing|s)?\\b",
+        "\\b(?:engine|motor|vehicle|car|truck|suv|van)\\b[^.;!?\\n]{0,35}\\b(?:shut(?:s)? (?:off|down)|died|cut(?:s)? out|stopped running)\\b"
+      ]
+    },
+    {
+      "mode": "failure_to_start",
+      "description": "Engine/vehicle cannot start or restart.",
+      "triggers": [
+        "start",
+        "crank"
+      ],
+      "patterns": [
+        "\\b(?:engine|motor|vehicle|car|truck|suv|van)\\b[^.;!?\\n]{0,65}\\b(?:would not|will not|won't|did not|does not|doesn't|could not|cannot|can't|failed to|fails to|unable to) (?:re)?start\\b",
+        "\\b(?:unable|fail(?:ed|s)?) to (?:re)?start\\b[^.;!?\\n]{0,35}\\b(?:engine|motor|vehicle|car|truck|suv|van)\\b",
+        "\\b(?:no[- ]start|crank(?:s|ed|ing)? but (?:will|would|does|did) not start)\\b",
+        "\\b(?:engine|motor|vehicle|car|truck|suv|van)\\b[^.;!?\\n]{0,35}\\b(?:would not|will not|won't|did not|does not|could not) crank\\b"
+      ]
+    },
+    {
+      "mode": "reduced_engine_power",
+      "description": "Explicit loss or reduction of engine/propulsion power or inability to accelerate.",
+      "triggers": [
+        "power",
+        "accelerat"
+      ],
+      "patterns": [
+        "\\b(?:(?:loss|reduction|lack) of|lost|losing|reduced) (?:all |the )?(?:engine|motor|propulsion) power\\b",
+        "\\b(?:engine|vehicle|car|truck)\\b[^.;!?\\n]{0,35}\\b(?:lost|loses|losing) (?:all |its )?power\\b(?! (?:steering|brake|assist))",
+        "\\b(?:reduced engine power|engine power (?:was )?reduced)\\b",
+        "\\b(?:engine|motor|vehicle|car|truck|suv|van)\\b[^.;!?\\n]{0,35}\\b(?:would not|will not|could not|failed to|unable to) accelerat\\w*\\b"
+      ]
+    },
+    {
+      "mode": "unintended_acceleration",
+      "description": "Acceleration or throttle actuation without the intended driver request.",
+      "triggers": [
+        "accelerat",
+        "throttle",
+        "surge",
+        "sped up"
+      ],
+      "patterns": [
+        "\\b(?:unintended|uncommanded|unexpected|sudden|uncontrolled) accelerat\\w*\\b",
+        "\\baccelerat\\w*\\b[^.;!?\\n]{0,45}\\b(?:on its own|by itself|without (?:pressing|depressing|warning)|unintentionally|unexpectedly|uncontrollably)\\b",
+        "\\b(?:accelerator|gas pedal|throttle)\\b[^.;!?\\n]{0,35}\\b(?:stuck|sticking|jammed)\\b",
+        "\\b(?:engine|motor|vehicle|car|truck|suv|van)\\b[^.;!?\\n]{0,35}\\b(?:surged|surges|sped up)\\b"
+      ]
+    },
+    {
+      "mode": "loss_of_braking",
+      "description": "Braking failure, ineffective stopping, or brake pedal losing resistance.",
+      "triggers": [
+        "brak",
+        "pedal",
+        "stop"
+      ],
+      "patterns": [
+        "\\b(?:brak(?:e|es|ing)|brak(?:e|ing) system|abs|anti[- ]?lock brakes)\\b[^.;!?\\n]{0,35}\\b(?:fail(?:ed|ure|ing|s)?|malfunction(?:ed|ing|s)?|inoperativ\\w*|not work(?:ing)?|stopped work(?:ing)?)\\b",
+        "\\b(?:loss|lost|losing) (?:of )?(?:all )?(?:braking|brake power|brake function|brakes)\\b",
+        "\\bbrake pedal\\b[^.;!?\\n]{0,50}\\b(?:went|goes|sank|sinks|fell|dropped|pressed|depressed)\\b[^.;!?\\n]{0,20}\\b(?:floor|all the way down)\\b",
+        "\\b(?:brakes? (?:did|does|would|will) not (?:stop|engage|respond)|unable to stop (?:the )?vehicle)\\b",
+        "\\b(?:no|without) (?:any )?brak(?:es|ing)\\b"
+      ]
+    },
+    {
+      "mode": "unintended_braking",
+      "description": "Brakes engage, lock, or drag without appropriate request.",
+      "triggers": [
+        "brak",
+        "abs"
+      ],
+      "patterns": [
+        "\\b(?:brak(?:e|es|ing)|abs)\\b[^.;!?\\n]{0,35}\\b(?:lock(?:ed|ing|s)? up|locked|seized|dragging|dragged|engaged (?:on their own|by themselves)|activated (?:on its own|by itself))\\b",
+        "\\b(?:unintended|unexpected|phantom) braking\\b",
+        "\\bbrak(?:e|es|ing)\\b[^.;!?\\n]{0,45}\\b(?:without (?:warning|input|reason)|on (?:its|their) own|by (?:itself|themselves))\\b"
+      ]
+    },
+    {
+      "mode": "steering_loss",
+      "description": "Loss of steering/assist, binding steering, or substantial difficulty steering.",
+      "triggers": [
+        "steer",
+        "turn the wheel"
+      ],
+      "patterns": [
+        "\\b(?:power steering|steering(?: system| assist)?)\\b[^.;!?\\n]{0,35}\\b(?:(?:fail(?:ed|ure|ing|s)?|malfunction(?:ed|ing|s)?|inoperativ\\w*|not work(?:ing)?|stopped work(?:ing)?)|lock(?:ed|ing|s)?(?: up)?|seized|lost|went out|cut out)\\b",
+        "\\b(?:lost|loss of|losing)\\b[^.;!?\\n]{0,25}\\b(?:power steering|steering(?: control| assist)?)\\b",
+        "\\b(?:difficult|hard|unable|impossible) to (?:steer|turn (?:the )?(?:steering )?wheel)\\b",
+        "\\bsteering\\b[^.;!?\\n]{0,35}\\b(?:became|was|is|felt) (?:very |extremely )?(?:stiff|hard|unresponsive)\\b",
+        "\\bsteering wheel\\b[^.;!?\\n]{0,25}\\b(?:fell off|came off|detach\\w*|broke off)\\b"
+      ]
+    },
+    {
+      "mode": "transmission_shift_failure",
+      "description": "Transmission slips, jerks, fails, or cannot select/hold a gear.",
+      "triggers": [
+        "transmission",
+        "gear",
+        "shift",
+        "clutch"
+      ],
+      "patterns": [
+        "\\b(?:transmission|gearbox|clutch)\\b[^.;!?\\n]{0,35}\\b(?:(?:fail(?:ed|ure|ing|s)?|malfunction(?:ed|ing|s)?|inoperativ\\w*|not work(?:ing)?|stopped work(?:ing)?)|slip(?:ped|ping|s)?|jerk(?:ed|ing|s)?|stuck|shudder(?:ed|ing|s)?)\\b",
+        "\\b(?:unable to|could not|would not|will not|failed to|won't) (?:shift|change gears|engage (?:a |the )?gear)\\b",
+        "\\b(?:gear(?:s)?|gear shift)\\b[^.;!?\\n]{0,25}\\b(?:stuck|stick(?:s|ing)?|slip(?:ped|ping|s)?|disengag\\w*|jump\\w* out)\\b",
+        "\\b(?:harsh|hard|erratic|rough|delayed) shift(?:ing|s)?\\b"
+      ]
+    },
+    {
+      "mode": "fluid_leak",
+      "description": "Observed leak of fuel, oil, coolant, brake/transmission or other vehicle fluid.",
+      "triggers": [
+        "leak",
+        "leaking",
+        "leakage",
+        "spill"
+      ],
+      "patterns": [
+        "\\b(?:fuel|gasoline|diesel|oil|coolant|antifreeze|brake fluid|transmission fluid|power steering fluid)\\b[^.;!?\\n]{0,40}\\bleak\\w*\\b",
+        "\\bleak\\w*\\b[^.;!?\\n]{0,40}\\b(?:fuel|gasoline|diesel|oil|coolant|antifreeze|brake fluid|transmission fluid|power steering fluid)\\b",
+        "\\b(?:fuel|gas|oil|coolant|brake|transmission) (?:tank|line|hose|pipe|reservoir|pump|system|seal)\\b[^.;!?\\n]{0,30}\\bleak\\w*\\b"
+      ]
+    },
+    {
+      "mode": "overheating",
+      "description": "Vehicle, engine, battery or a vehicle part overheats.",
+      "triggers": [
+        "overheat",
+        "temperature",
+        "ran hot",
+        "running hot"
+      ],
+      "patterns": [
+        "\\boverheat(?:ed|ing|s)?\\b",
+        "\\b(?:engine|motor|battery)\\b[^.;!?\\n]{0,30}\\b(?:ran hot|running hot|temperature (?:was |became )?(?:excessive|too high))\\b"
+      ]
+    },
+    {
+      "mode": "fire_smoke",
+      "description": "Reported actual fire, burning, flames, or visible smoke.",
+      "triggers": [
+        "fire",
+        "flame",
+        "smok",
+        "burn"
+      ],
+      "patterns": [
+        "\\b(?:caught|catch(?:es|ing)?|on|engulfed in|burst into|erupted in(?:to)?) (?:a )?(?:fire|flames)\\b",
+        "\\b(?:fire|flames)\\b[^.;!?\\n]{0,30}\\b(?:erupted|started|occurred|broke out|spread|came|coming|emerged|engulfed)\\b",
+        "\\b(?:caus(?:ed|ing)|result(?:ed|ing) in|ignited (?:a )?) (?:a )?fire\\b",
+        "\\b(?:smoke|smoking)\\b[^.;!?\\n]{0,40}\\b(?:from|coming|came|emitting|under|inside|filled|pouring)\\b",
+        "\\b(?:emitt(?:ed|ing)|saw|observed|noticed|producing|billowing|filled with)\\b[^.;!?\\n]{0,25}\\bsmoke\\b",
+        "\\b(?:engine|motor|vehicle|car|truck|suv|van)\\b[^.;!?\\n]{0,35}\\b(?:burned|burnt) (?:up|down|to the ground)\\b"
+      ]
+    },
+    {
+      "mode": "airbag_non_deployment",
+      "description": "Airbag explicitly fails to deploy/inflate (absence of deployment is positive failure evidence).",
+      "triggers": [
+        "airbag",
+        "air bag"
+      ],
+      "patterns": [
+        "\\bair\\s?bags?\\b[^.;!?\\n]{0,65}\\b(?:did not|didn't|does not|would not|never|failed to|fails to) (?:deploy|inflate)\\w*\\b",
+        "\\b(?:no|without) air\\s?bag (?:deployment|deploying)\\b",
+        "\\bair\\s?bag\\b[^.;!?\\n]{0,25}\\bnon[- ]deployment\\b"
+      ]
+    },
+    {
+      "mode": "unintended_airbag_deployment",
+      "description": "Airbag deploys unexpectedly or without a reported crash/impact.",
+      "triggers": [
+        "airbag",
+        "air bag"
+      ],
+      "patterns": [
+        "\\bair\\s?bags?\\b[^.;!?\\n]{0,65}\\bdeploy\\w*\\b[^.;!?\\n]{0,45}\\b(?:unexpectedly|inadvertently|spontaneously|without (?:a |any )?(?:crash|impact|collision)|on (?:its|their) own)\\b",
+        "\\bair\\s?bags?\\b[^.;!?\\n]{0,45}\\b(?:unexpectedly|inadvertently|spontaneously) deploy\\w*\\b",
+        "\\b(?:inadvertent|unexpected|unintended|spontaneous) (?:air\\s?bag )?deployment\\b"
+      ]
+    },
+    {
+      "mode": "electrical_power_loss",
+      "description": "Explicit electrical supply, battery, or total electrical-system power failure.",
+      "triggers": [
+        "electrical",
+        "battery",
+        "batteries",
+        "power",
+        "alternator"
+      ],
+      "patterns": [
+        "\\b(?:lost|loss of|losing|without|no) (?:all |any |complete )?electrical power\\b",
+        "\\b(?:electrical system|alternator)\\b[^.;!?\\n]{0,35}\\b(?:shut(?:s)? down|went (?:dead|out)|died|stopped charging|not charging)\\b",
+        "\\b(?:battery|batteries)\\b[^.;!?\\n]{0,35}\\b(?:died|dead|discharged|drained|would not hold (?:a )?charge|does not hold (?:a )?charge)\\b",
+        "\\b(?:all|entire)\\b[^.;!?\\n]{0,15}\\b(?:electrical|electric)\\b[^.;!?\\n]{0,25}\\b(?:power went out|power shut off|went dead)\\b"
+      ]
+    },
+    {
+      "mode": "tire_failure",
+      "description": "Tire blowout, tread/belt separation, rupture, or loss of inflation.",
+      "triggers": [
+        "tire",
+        "tyre",
+        "tread",
+        "blowout",
+        "blew out"
+      ],
+      "patterns": [
+        "\\b(?:tire|tyre|tread|tire belt)\\b[^.;!?\\n]{0,40}\\b(?:blew|blow(?:n|out)?|separat\\w*|ruptur\\w*|burst|deflat\\w*|went flat|lost (?:air|pressure)|losing (?:air|pressure)|split)\\b",
+        "\\b(?:tread|belt) separation\\b",
+        "\\b(?:tire |tyre )?blowout\\b"
+      ]
+    },
+    {
+      "mode": "wheel_detachment",
+      "description": "Wheel comes off, separates, or detaches.",
+      "triggers": [
+        "wheel",
+        "rim"
+      ],
+      "patterns": [
+        "(?<!steering )\\b(?:wheel|rim)\\b[^.;!?\\n]{0,40}\\b(?:fell off|came off|coming off|detach\\w*|separat\\w*|broke off)\\b"
+      ]
+    },
+    {
+      "mode": "suspension_failure",
+      "description": "Suspension part explicitly breaks, collapses, or fails.",
+      "triggers": [
+        "suspension",
+        "control arm",
+        "ball joint",
+        "tie rod",
+        "strut",
+        "spring",
+        "axle"
+      ],
+      "patterns": [
+        "\\b(?:suspension|control arm|ball joint|tie rod|strut|coil spring|leaf spring|axle)\\b[^.;!?\\n]{0,35}\\b(?:(?:fail(?:ed|ure|ing|s)?|malfunction(?:ed|ing|s)?|inoperativ\\w*|not work(?:ing)?|stopped work(?:ing)?)|broke|broken|fractur\\w*|separat\\w*|collaps\\w*|snapped)\\b",
+        "\\b(?:broken|fractured|snapped) (?:suspension|control arm|ball joint|tie rod|strut|coil spring|leaf spring|axle)\\b"
+      ]
+    },
+    {
+      "mode": "restraint_failure",
+      "description": "Seat belt/buckle or restraint explicitly fails, releases, jams, or cannot latch.",
+      "triggers": [
+        "belt",
+        "buckle",
+        "restraint",
+        "harness"
+      ],
+      "patterns": [
+        "\\b(?:seat\\s?belts?|seat\\s?belt buckles?|restraint|safety belt|shoulder belt|lap belt)\\b[^.;!?\\n]{0,35}\\b(?:(?:fail(?:ed|ure|ing|s)?|malfunction(?:ed|ing|s)?|inoperativ\\w*|not work(?:ing)?|stopped work(?:ing)?)|unlatch\\w*|broke|broken|stuck|jammed|would not latch|did not lock|does not lock|would not retract)\\b",
+        "\\b(?:buckle|harness)\\b[^.;!?\\n]{0,25}\\b(?:failed|broke|unlatched|will not latch|would not latch)\\b"
+      ]
+    },
+    {
+      "mode": "visibility_failure",
+      "description": "Wipers fail or window/windshield cracks, shatters, or obstructs visibility.",
+      "triggers": [
+        "wiper",
+        "windshield",
+        "window",
+        "visibility",
+        "defrost"
+      ],
+      "patterns": [
+        "\\b(?:wipers?|windshield wipers?|defroster)\\b[^.;!?\\n]{0,35}\\b(?:(?:fail(?:ed|ure|ing|s)?|malfunction(?:ed|ing|s)?|inoperativ\\w*|not work(?:ing)?|stopped work(?:ing)?)|stopp\\w*|stuck|broke|broken)\\b",
+        "\\b(?:windshield|window|rear glass)\\b[^.;!?\\n]{0,35}\\b(?:shatter\\w*|crack\\w*|explod\\w*|fogged|fogging)\\b",
+        "\\b(?:visibility|view)\\b[^.;!?\\n]{0,20}\\b(?:obstructed|blocked|impaired)\\b"
+      ]
+    },
+    {
+      "mode": "lighting_failure",
+      "description": "Head/tail/brake/turn-signal lights explicitly fail or go out.",
+      "triggers": [
+        "headlight",
+        "head light",
+        "headlamp",
+        "tail light",
+        "taillight",
+        "brake light",
+        "turn signal"
+      ],
+      "patterns": [
+        "\\b(?:head\\s?lights?|headlamps?|tail\\s?lights?|brake lights?|turn signals?)\\b[^.;!?\\n]{0,35}\\b(?:(?:fail(?:ed|ure|ing|s)?|malfunction(?:ed|ing|s)?|inoperativ\\w*|not work(?:ing)?|stopped work(?:ing)?)|went out|go out|flicker\\w*|would not (?:turn on|illuminate)|did not (?:turn on|illuminate))\\b",
+        "\\b(?:loss of|lost) (?:both |all )?(?:head\\s?lights?|headlamps?)\\b"
+      ]
+    },
+    {
+      "mode": "door_latch_failure",
+      "description": "Door/hood/tailgate latch fails or opens unintentionally.",
+      "triggers": [
+        "door",
+        "hood",
+        "latch",
+        "tailgate",
+        "hatch"
+      ],
+      "patterns": [
+        "\\b(?:door latch|hood latch|tailgate latch|hatch latch)\\b[^.;!?\\n]{0,35}\\b(?:(?:fail(?:ed|ure|ing|s)?|malfunction(?:ed|ing|s)?|inoperativ\\w*|not work(?:ing)?|stopped work(?:ing)?)|broke|broken|stuck)\\b",
+        "\\b(?:door|hood|tailgate|hatch)\\b[^.;!?\\n]{0,35}\\b(?:flew open|opened (?:unexpectedly|on its own|while driving)|would not (?:latch|close)|will not (?:latch|close)|won't (?:latch|close)|unlatched)\\b"
+      ]
+    },
+    {
+      "mode": "rough_running",
+      "description": "Engine misfires, runs rough, or hesitates.",
+      "triggers": [
+        "misfir",
+        "rough",
+        "hesitat"
+      ],
+      "patterns": [
+        "\\bmisfir(?:e|es|ed|ing)\\b",
+        "\\b(?:engine|motor|vehicle)\\b[^.;!?\\n]{0,35}\\b(?:ran rough|runs rough|running rough|rough idle|hesitat\\w*)\\b"
+      ]
+    },
+    {
+      "mode": "abnormal_vibration",
+      "description": "Explicit vehicle/steering vibration, shaking or wobble during operation.",
+      "triggers": [
+        "vibrat",
+        "shak",
+        "shook",
+        "wobbl",
+        "shudder"
+      ],
+      "patterns": [
+        "\\b(?:vehicle|car|truck|steering wheel|front end|rear end)\\b[^.;!?\\n]{0,35}\\b(?:vibrat\\w*|shak(?:e|es|ing)|shook|wobbl\\w*|shudder\\w*)\\b",
+        "\\b(?:severe|excessive|violent|abnormal) (?:vibration|shaking|wobbl\\w*|shudder\\w*)\\b"
+      ]
+    }
+  ],
+  "input_contract": "Description text only. No recall labels, components or outcome flags.",
+  "negation_policy": "Exclude recognized negation/risk-only patterns; preserve non-operation failures (e.g. airbag did not deploy). No warning does not negate a failure.",
+  "conflict_policy": "Classify every distinct usable clean-text variant, retain flag, union modes, keep per-variant evidence. Variant disagreement is not resolved into truth.",
+  "primary_policy": "Exactly one matched mode => that mode; zero or multiple => null. No ranking asserted.",
+  "unknown_policy": "No usable text or no qualifying symptom => explicit status and zero numeric mode columns.",
+  "evidence_policy": "At most one accepted match per mode per distinct text variant; excerpts redact recognizable email/phone/VIN patterns."
+}
