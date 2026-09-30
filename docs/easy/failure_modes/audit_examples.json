@@ -1,0 +1,1434 @@
+{
+  "purpose": "Small deterministic actual-data examples for human inspection; NOT a labeled validation set or random sample.",
+  "selection": "First three occurrences per mode, first 12 unmatched, first eight conflicts, and first 12 selected negation phrases in source order.",
+  "source": "outputs\\nhtsa_text_mining\\processed\\vehicle_complaints.parquet",
+  "per_mode": {
+    "restraint_failure": [
+      {
+        "complaint_id": "C-4cfef59385bbca331557cb2f28de197d502c57d44d9f98ff87987cef51214857",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "restraint_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "restraint_failure",
+            "variant_index": 0,
+            "rule_id": "restraint_failure:1",
+            "excerpt": "REAR SEAT BELTS FAILED TWICE. *DSH",
+            "match_text": "SEAT BELTS FAILED"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-5b3d666cf4aae506509a1636f39218b4db121651a859a544c077595cb8566717",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "restraint_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "restraint_failure",
+            "variant_index": 0,
+            "rule_id": "restraint_failure:1",
+            "excerpt": "MOTORIZED SEAT BELTS FAILED, OPENED WHILE DRIVING AN",
+            "match_text": "SEAT BELTS FAILED"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-63c83eb5c410ca40880029e5e59d91c8c14950fe2035f4d68101867f810856f5",
+        "has_text_conflict": true,
+        "all_matched_modes": [
+          "restraint_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "restraint_failure",
+            "variant_index": 0,
+            "rule_id": "restraint_failure:1",
+            "excerpt": "SEAT BELT FAILURE--RECALL, BUT PARTS NOT A",
+            "match_text": "SEAT BELT FAILURE"
+          }
+        ]
+      }
+    ],
+    "transmission_shift_failure": [
+      {
+        "complaint_id": "C-bb085c7fff5d3b54924a24aa4283c5c7fea16520b02c2538c2622b99d1e88ac4",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "transmission_shift_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "transmission_shift_failure",
+            "variant_index": 0,
+            "rule_id": "transmission_shift_failure:1",
+            "excerpt": "TRANSMISSION JERKS/GEARS STICK. *SD",
+            "match_text": "TRANSMISSION JERKS"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-cd70589f6678635b91303f4f23272b17cb82333ecd76f894cb8a41cb997a0f0d",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "transmission_shift_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "transmission_shift_failure",
+            "variant_index": 0,
+            "rule_id": "transmission_shift_failure:1",
+            "excerpt": "TRANSMISSION FAILURE. *AK",
+            "match_text": "TRANSMISSION FAILURE"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-8b2f99b34a55510626e461471870ca46fefb65eedff363e11ca29f5e19c295d2",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "transmission_shift_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "transmission_shift_failure",
+            "variant_index": 0,
+            "rule_id": "transmission_shift_failure:1",
+            "excerpt": "FOUND TO NEVER WORK. THE TRANSMISSION FAILED AFTER ONLY 29000 MILES W",
+            "match_text": "TRANSMISSION FAILED"
+          }
+        ]
+      }
+    ],
+    "steering_loss": [
+      {
+        "complaint_id": "C-ebf2bbb1a62904ab67fcfa204e5f6b74f411d3f74d4f4a133edf78dfcb6172d4",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "steering_loss"
+        ],
+        "evidence": [
+          {
+            "mode": "steering_loss",
+            "variant_index": 0,
+            "rule_id": "steering_loss:3",
+            "excerpt": "VEHICLE IS DIFFICULT TO STEER AND WHEN A BUMP IS HIT I",
+            "match_text": "DIFFICULT TO STEER"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-840eb99a7a87fb0ae2ed2879f498d031466bcaf86e81fd7e86e78728419390ce",
+        "has_text_conflict": true,
+        "all_matched_modes": [
+          "steering_loss"
+        ],
+        "evidence": [
+          {
+            "mode": "steering_loss",
+            "variant_index": 1,
+            "rule_id": "steering_loss:1",
+            "excerpt": "STEERING KNUCKLES FAILED. *DH",
+            "match_text": "STEERING KNUCKLES FAILED"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-b495495df4d5277c4f93aefc7d420efdd11b3798f824a0456c645049f9ae7430",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "steering_loss"
+        ],
+        "evidence": [
+          {
+            "mode": "steering_loss",
+            "variant_index": 0,
+            "rule_id": "steering_loss:1",
+            "excerpt": "NE, AT ABOUT 45 MPH. THE STEERING FELT HARD, AND LOCKED UP.*AK",
+            "match_text": "STEERING FELT HARD, AND LOCKED UP"
+          }
+        ]
+      }
+    ],
+    "loss_of_braking": [
+      {
+        "complaint_id": "C-9a18ab37bd388454fc2f762d61eff61a3be83e9a01585de04948fa7ad578b8e7",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "loss_of_braking"
+        ],
+        "evidence": [
+          {
+            "mode": "loss_of_braking",
+            "variant_index": 0,
+            "rule_id": "loss_of_braking:1",
+            "excerpt": "ABS BRAKING SYSTEM FAILED WHILE DRIVING ON ANY TYP",
+            "match_text": "ABS BRAKING SYSTEM FAILED"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-b42d6463ef4233b8603615f3654f8610b471ac51ebc3b95da0ec540b83545ce2",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "loss_of_braking"
+        ],
+        "evidence": [
+          {
+            "mode": "loss_of_braking",
+            "variant_index": 0,
+            "rule_id": "loss_of_braking:1",
+            "excerpt": "ANTILOCK BRAKES FAILED, CAUSING ACCIDENT/INJURY",
+            "match_text": "ANTILOCK BRAKES FAILED"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-dd8941b36f1fcff3316d9e184b9ec9db6fde39bd3b61893d4dc796968919ed00",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "loss_of_braking"
+        ],
+        "evidence": [
+          {
+            "mode": "loss_of_braking",
+            "variant_index": 0,
+            "rule_id": "loss_of_braking:1",
+            "excerpt": "PPROX. 60MPH EXPERIENCED ABS BRAKE FAILURE, WHEN MADE ATTEMPT TO SL",
+            "match_text": "ABS BRAKE FAILURE"
+          }
+        ]
+      }
+    ],
+    "fire_smoke": [
+      {
+        "complaint_id": "C-e2d0de433c8a4984f258d12becce0ad0fd5b4b95ed0b8c0e5674b02181c6a021",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "fire_smoke"
+        ],
+        "evidence": [
+          {
+            "mode": "fire_smoke",
+            "variant_index": 0,
+            "rule_id": "fire_smoke:3",
+            "excerpt": "CABLE ASSEMBLY SHORTED, CAUSING FIRE IN STEERING COLUMN/MELTI",
+            "match_text": "CAUSING FIRE"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-c59c9ac855793d4a98f4574011d822ad549619e4b7d2ae7c91037f027c221c4e",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "fire_smoke"
+        ],
+        "evidence": [
+          {
+            "mode": "fire_smoke",
+            "variant_index": 0,
+            "rule_id": "fire_smoke:1",
+            "excerpt": "FROM WOODS, VEHICLE WAS ENGULFED IN FLAMES. *AK",
+            "match_text": "ENGULFED IN FLAMES"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-6c2ea6c6559325bec610f49ba00b6669289cfe079f7cd19a8450728156803be4",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "fire_smoke"
+        ],
+        "evidence": [
+          {
+            "mode": "fire_smoke",
+            "variant_index": 0,
+            "rule_id": "fire_smoke:1",
+            "excerpt": "ING THE VEHICLE TO CATCH ON FIRE IN THE ENGINE COMPARTMEN",
+            "match_text": "ON FIRE"
+          }
+        ]
+      }
+    ],
+    "airbag_non_deployment": [
+      {
+        "complaint_id": "C-5802fd949503ecbd683999945d4bebf23745012acdaca4944562e2bfefc5aaa0",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "airbag_non_deployment"
+        ],
+        "evidence": [
+          {
+            "mode": "airbag_non_deployment",
+            "variant_index": 0,
+            "rule_id": "airbag_non_deployment:1",
+            "excerpt": "KING, ISUZU HIT VEHICLE, AIRBAGS DID NOT DEPLOY ON IMPACT, *AK",
+            "match_text": "AIRBAGS DID NOT DEPLOY"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-d447743171773e69729ad98601a05e574ed4caa9a2b1447f998bb015c1494d16",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "airbag_non_deployment"
+        ],
+        "evidence": [
+          {
+            "mode": "airbag_non_deployment",
+            "variant_index": 0,
+            "rule_id": "airbag_non_deployment:1",
+            "excerpt": "HONE POLE. DRIVER'S SIDE AIR BAG DID NOT DEPLOY UPON IMPACT BUT PASSENGE",
+            "match_text": "AIR BAG DID NOT DEPLOY"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-7dbd373d6af04928e251eb77e111805e53a2c109a4d87f8d66b7d930efae2377",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "airbag_non_deployment"
+        ],
+        "evidence": [
+          {
+            "mode": "airbag_non_deployment",
+            "variant_index": 0,
+            "rule_id": "airbag_non_deployment:1",
+            "excerpt": "THE FAILURE WAS THAT THE AIR BAGS DID NOT DEPLOY. OFFICER PETERSON FROM T",
+            "match_text": "AIR BAGS DID NOT DEPLOY"
+          }
+        ]
+      }
+    ],
+    "unintended_braking": [
+      {
+        "complaint_id": "C-271da090734b2785fb7b10e4e344664e12d9783dd26690b012a319a03a88cc85",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "unintended_braking"
+        ],
+        "evidence": [
+          {
+            "mode": "unintended_braking",
+            "variant_index": 0,
+            "rule_id": "unintended_braking:1",
+            "excerpt": "ABS BRAKE SYSTEM LOCKED UP ON WET SURFACE. *AK",
+            "match_text": "ABS BRAKE SYSTEM LOCKED UP"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-c8cf4492f2213d907ec37dbf4a0807034eebaa1ae7a3a1746f04047a9836fe16",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "unintended_braking"
+        ],
+        "evidence": [
+          {
+            "mode": "unintended_braking",
+            "variant_index": 0,
+            "rule_id": "unintended_braking:1",
+            "excerpt": "ANTI-LOCK BRAKES LOCK UP. *DH",
+            "match_text": "BRAKES LOCK UP"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-49c0679ff94e1754d1ab7952f081f5af72541442cfde7440cc3798e0de6bde15",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "unintended_braking"
+        ],
+        "evidence": [
+          {
+            "mode": "unintended_braking",
+            "variant_index": 0,
+            "rule_id": "unintended_braking:1",
+            "excerpt": "AT SPEED 35MPH, APPLIED BRAKES ON WET SURFACE ABS LOCKED UP, CAUSING THE VEHICLE TO",
+            "match_text": "BRAKES ON WET SURFACE ABS LOCKED UP"
+          }
+        ]
+      }
+    ],
+    "tire_failure": [
+      {
+        "complaint_id": "C-37a1e5830e637216997a11364a0516b18e002d8d6fed595fc3852497c065c52d",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "tire_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "tire_failure",
+            "variant_index": 0,
+            "rule_id": "tire_failure:1",
+            "excerpt": "MICHELIN TIRE SIDEWALL BLEW OUT. *SD",
+            "match_text": "TIRE SIDEWALL BLEW"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-e6559349068b756f37264462615573f6b38da076cdd1af451082ca25c0029dba",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "tire_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "tire_failure",
+            "variant_index": 0,
+            "rule_id": "tire_failure:1",
+            "excerpt": "ALL (OOT-005) BECAUSE OF TREAD SEPARATION, OWNER REQUESTING REIMBU",
+            "match_text": "TREAD SEPARATION"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-49d665849dc0587706bb7b619a02b6de3d13269f240cc0a4cfa2da0d7bdc4bf2",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "tire_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "tire_failure",
+            "variant_index": 0,
+            "rule_id": "tire_failure:1",
+            "excerpt": "WE HAD A TIRE SEPARATE AT 75MPH IN THE REAR. A",
+            "match_text": "TIRE SEPARATE"
+          }
+        ]
+      }
+    ],
+    "abnormal_vibration": [
+      {
+        "complaint_id": "C-5034efaaeb05f71c7f31604e5fc0116bc491ef74b5f306b86a2a2f0453ab7b65",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "abnormal_vibration"
+        ],
+        "evidence": [
+          {
+            "mode": "abnormal_vibration",
+            "variant_index": 0,
+            "rule_id": "abnormal_vibration:1",
+            "excerpt": "UPON ACCELERATION, VEHICLE VIBRATES W/POOR ACCELERATION AND",
+            "match_text": "VEHICLE VIBRATES"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-fa2a85dd2f586e5912bcfcb9441cdaefc34f8fa9c4315ed12c7c27d95b7d68ed",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "abnormal_vibration"
+        ],
+        "evidence": [
+          {
+            "mode": "abnormal_vibration",
+            "variant_index": 0,
+            "rule_id": "abnormal_vibration:1",
+            "excerpt": "STEERING WHEEL SHAKES WHEN THE CAR IS IN GEAR",
+            "match_text": "STEERING WHEEL SHAKES"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-d5e83edb52cea9a84f9d831ab78f7268982fd14c2ec8a7f7dd86f665708a42c1",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "abnormal_vibration"
+        ],
+        "evidence": [
+          {
+            "mode": "abnormal_vibration",
+            "variant_index": 0,
+            "rule_id": "abnormal_vibration:1",
+            "excerpt": "REAR END OF VEHICLE SHAKES VIOLENTLY. VEHICLE HAS B",
+            "match_text": "REAR END OF VEHICLE SHAKES"
+          }
+        ]
+      }
+    ],
+    "engine_stall": [
+      {
+        "complaint_id": "C-331d2f69b741983255437309d554da93af079d736e9a274021e4df50eb6be846",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "engine_stall"
+        ],
+        "evidence": [
+          {
+            "mode": "engine_stall",
+            "variant_index": 0,
+            "rule_id": "engine_stall:1",
+            "excerpt": ", VEHICLE WOULD SUDDENLY STALL FOR NO APPARENT REASON.",
+            "match_text": "STALL"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-5502ac99d36aa477855a64b401250f6aa61c54a7f86be02bef388fe3a36ba920",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "engine_stall"
+        ],
+        "evidence": [
+          {
+            "mode": "engine_stall",
+            "variant_index": 0,
+            "rule_id": "engine_stall:1",
+            "excerpt": "ENGINE STALLED DUE TO ALTERNATOR FAILUR",
+            "match_text": "STALLED"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-ac4697da9cea4914c286abcc699ed42b1d74113cbf83dc572dcbaccf6f3e32a2",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "engine_stall"
+        ],
+        "evidence": [
+          {
+            "mode": "engine_stall",
+            "variant_index": 0,
+            "rule_id": "engine_stall:1",
+            "excerpt": "ILED, CAUSING VEHICLE TO STALL/CRACKING FLEX PLATE/LOSE",
+            "match_text": "STALL"
+          }
+        ]
+      }
+    ],
+    "wheel_detachment": [
+      {
+        "complaint_id": "C-34a639fcbede64cca8af994be923833acade0055e6057fa9fd54a9acde2659d4",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "wheel_detachment"
+        ],
+        "evidence": [
+          {
+            "mode": "wheel_detachment",
+            "variant_index": 0,
+            "rule_id": "wheel_detachment:1",
+            "excerpt": "LACK OF TENSION, CAUSING WHEEL TO DETACH FROM AXEL, ALSO REAR HAT",
+            "match_text": "WHEEL TO DETACH"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-e1ef48bafb93dd0d8b606397a97115c5817c55bf077e06b403fbf0ca80bcc568",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "wheel_detachment"
+        ],
+        "evidence": [
+          {
+            "mode": "wheel_detachment",
+            "variant_index": 0,
+            "rule_id": "wheel_detachment:1",
+            "excerpt": "H, THE FRONT DRIVER SIDE WHEEL SUDDENLY DETACHED FROM THE VEHICLE. THE VE",
+            "match_text": "WHEEL SUDDENLY DETACHED"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-d44667f4f0d329dda3d8a4c31bdd5336b5259c0b2052c9bd91524e8effcbb526",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "wheel_detachment"
+        ],
+        "evidence": [
+          {
+            "mode": "wheel_detachment",
+            "variant_index": 0,
+            "rule_id": "wheel_detachment:1",
+            "excerpt": "the front driver’s side wheel and the passenger’s side front wheels separated from the axle, causing t",
+            "match_text": "wheel and the passenger’s side front wheels separated"
+          }
+        ]
+      }
+    ],
+    "fluid_leak": [
+      {
+        "complaint_id": "C-beab7e4a6428b0f2cf481fc1393f02a888239a5847e1b230f2722f323bd73426",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "fluid_leak"
+        ],
+        "evidence": [
+          {
+            "mode": "fluid_leak",
+            "variant_index": 0,
+            "rule_id": "fluid_leak:1",
+            "excerpt": "GASKET SLIPPING, CAUSING OIL LEAK ONTO THE EXHAUST, RESULT",
+            "match_text": "OIL LEAK"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-592252a2ebe028c40847bae55fcf13962e1a7b73eb807283e8587b759c4539e8",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "fluid_leak"
+        ],
+        "evidence": [
+          {
+            "mode": "fluid_leak",
+            "variant_index": 0,
+            "rule_id": "fluid_leak:1",
+            "excerpt": "FUEL LEAK @/ON THE RUBBER HOSE WHE",
+            "match_text": "FUEL LEAK"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-d01195b0126750c50c57d057cb9006a00c3f0c0e2204339f8205e60b5b125db4",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "fluid_leak"
+        ],
+        "evidence": [
+          {
+            "mode": "fluid_leak",
+            "variant_index": 0,
+            "rule_id": "fluid_leak:1",
+            "excerpt": "PLASTIC GAS TANK CAUSING FUEL LEAK FROM SPLIT IN TANK. (DES",
+            "match_text": "FUEL LEAK"
+          }
+        ]
+      }
+    ],
+    "unintended_acceleration": [
+      {
+        "complaint_id": "C-6b6fa1b27d3c5f0e29fe10b337e96ca076bfe0f86808f42b0cccde023d7353aa",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "unintended_acceleration"
+        ],
+        "evidence": [
+          {
+            "mode": "unintended_acceleration",
+            "variant_index": 0,
+            "rule_id": "unintended_acceleration:4",
+            "excerpt": "VEHICLE SURGES UNEXPECTEDLY AT IDLE; AT",
+            "match_text": "VEHICLE SURGES"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-90f54520927969e353243136076d1d61bad13fd25dab1707b840e4e534075b22",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "unintended_acceleration"
+        ],
+        "evidence": [
+          {
+            "mode": "unintended_acceleration",
+            "variant_index": 0,
+            "rule_id": "unintended_acceleration:3",
+            "excerpt": "OUSEING RESULTING IN THE THROTTLE PEDAL STICKING TO THE FOLLOR. YH",
+            "match_text": "THROTTLE PEDAL STICKING"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-90b79781e15186ab4b55dccef79ce3284e6601afa78790e1e5acf2726aee4338",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "unintended_acceleration"
+        ],
+        "evidence": [
+          {
+            "mode": "unintended_acceleration",
+            "variant_index": 0,
+            "rule_id": "unintended_acceleration:1",
+            "excerpt": "IN THIS ACCIDENT DUE TO SUDDEN ACCELERATION WHILE VEHICLE WAS STOPPE",
+            "match_text": "SUDDEN ACCELERATION"
+          }
+        ]
+      }
+    ],
+    "suspension_failure": [
+      {
+        "complaint_id": "C-207a2ec45392612b1146a29496cded9a57ff469e6014539111686a3625ef0f97",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "suspension_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "suspension_failure",
+            "variant_index": 0,
+            "rule_id": "suspension_failure:1",
+            "excerpt": "STRUT FAILED.",
+            "match_text": "STRUT FAILED"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-e3e20bbd2f5f043e77416ec7545fc7d7ead2e2f6099b68e676631a46e1621810",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "suspension_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "suspension_failure",
+            "variant_index": 0,
+            "rule_id": "suspension_failure:1",
+            "excerpt": "AIR SUSPENSION SYSTEM FAILED, CAUSING VEHICLE TO RIDE",
+            "match_text": "SUSPENSION SYSTEM FAILED"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-c8edac3e68bb94dc36bd4ddb63f43d9f67aad2f795bb3fa8ec4d11d8511a46c3",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "suspension_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "suspension_failure",
+            "variant_index": 0,
+            "rule_id": "suspension_failure:1",
+            "excerpt": "THE FRONT SUSPENSION BAR WAS BROKEN CAUSING THE VEHICLE VEER",
+            "match_text": "SUSPENSION BAR WAS BROKEN"
+          }
+        ]
+      }
+    ],
+    "visibility_failure": [
+      {
+        "complaint_id": "C-f75d5b7a496c533bdb2e62bfb42e4761774d444a39a3edafb6e51d493ef52f5b",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "visibility_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "visibility_failure",
+            "variant_index": 0,
+            "rule_id": "visibility_failure:2",
+            "excerpt": "THE REAR WINDOW SHATTERED WHEN THE DEFROSTER WAS T",
+            "match_text": "WINDOW SHATTERED"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-7a19f5963d8518f9b5ebfb8d3bc697f51989e6aecba6cbfee5f0587315b4989e",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "visibility_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "visibility_failure",
+            "variant_index": 0,
+            "rule_id": "visibility_failure:1",
+            "excerpt": "ENTLY. THE DRIVER'S SIDE WIPER WASHER WAS NOT WORKING AS WELL AS THE PASSENGER",
+            "match_text": "WIPER WASHER WAS NOT WORKING"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-fe096d3434ae238ea6cc09b9b57fc5897d9a7fab97d50bcfe84936158e1bee38",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "visibility_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "visibility_failure",
+            "variant_index": 0,
+            "rule_id": "visibility_failure:1",
+            "excerpt": "THE WINDSHIELD WIPERS FAILED INTERMITTENTLY. ON MANY",
+            "match_text": "WINDSHIELD WIPERS FAILED"
+          }
+        ]
+      }
+    ],
+    "overheating": [
+      {
+        "complaint_id": "C-d8dde32f4ae9d43ffdd6675c104674ca8aa55cf7f636f2d882c8555b9043f7ee",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "overheating"
+        ],
+        "evidence": [
+          {
+            "mode": "overheating",
+            "variant_index": 0,
+            "rule_id": "overheating:1",
+            "excerpt": ", AND VEHICLE STARTED TO OVERHEAT. PULLED OVER TO THE SHOU",
+            "match_text": "OVERHEAT"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-ffc82d234cbf6990453997ced11facd2654ca036b241f940ac5d2bcec86b8485",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "fluid_leak",
+          "overheating"
+        ],
+        "evidence": [
+          {
+            "mode": "overheating",
+            "variant_index": 0,
+            "rule_id": "overheating:1",
+            "excerpt": "VEHICLE WAS OVERHEATING WHILE DRIVING. WAS TAKEN",
+            "match_text": "OVERHEATING"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-a1a5d310aebade141f51855d8c963bbb1abf215a5edca20594a16dce119c6da0",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "overheating"
+        ],
+        "evidence": [
+          {
+            "mode": "overheating",
+            "variant_index": 0,
+            "rule_id": "overheating:1",
+            "excerpt": "LLER FAILURE, AND ENGINE OVERHEATS. *LA",
+            "match_text": "OVERHEATS"
+          }
+        ]
+      }
+    ],
+    "reduced_engine_power": [
+      {
+        "complaint_id": "C-23750de9c383d0cf42eb8774c718105277bfb39e1abe04b5e0666c69ec2e9e5f",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "reduced_engine_power"
+        ],
+        "evidence": [
+          {
+            "mode": "reduced_engine_power",
+            "variant_index": 0,
+            "rule_id": "reduced_engine_power:2",
+            "excerpt": "ERS TURN ON AND OFF, AND VEHICLE COMPLETELY LOSES POWER AT 75 MPH. BATTERY APPEA",
+            "match_text": "VEHICLE COMPLETELY LOSES POWER"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-c6c5a078c1b2ce4c6c1402439346b14b52394190f04356a037fcaf9001726323",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "reduced_engine_power",
+          "overheating"
+        ],
+        "evidence": [
+          {
+            "mode": "reduced_engine_power",
+            "variant_index": 0,
+            "rule_id": "reduced_engine_power:2",
+            "excerpt": "HE TURNPIKE SUDDENLY THE CAR LOST POWER AND ALL THE LIGHTS ON TH",
+            "match_text": "CAR LOST POWER"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-35a7cd8128e1f5f42801fba5894374e314fb3e93f89ad94e15f71113602f0f4c",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "engine_stall",
+          "reduced_engine_power",
+          "rough_running"
+        ],
+        "evidence": [
+          {
+            "mode": "reduced_engine_power",
+            "variant_index": 0,
+            "rule_id": "reduced_engine_power:2",
+            "excerpt": "LITTLE WAY AND THEN THE ENGINE LOSING POWER. THIS HAPPENED FOUR OR F",
+            "match_text": "ENGINE LOSING POWER"
+          }
+        ]
+      }
+    ],
+    "lighting_failure": [
+      {
+        "complaint_id": "C-39e4a83208426226806d3f0f0fcd28e8bc1ecbc492cb8204125236a02cb9e837",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "lighting_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "lighting_failure",
+            "variant_index": 0,
+            "rule_id": "lighting_failure:1",
+            "excerpt": "HEADLIGHTS FLICKER ON AND OFF IN PULSATING",
+            "match_text": "HEADLIGHTS FLICKER"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-a07f4e3071df211d8160cf302d974ea8725f66de0f1fe0804085a6def6804fed",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "lighting_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "lighting_failure",
+            "variant_index": 0,
+            "rule_id": "lighting_failure:1",
+            "excerpt": "ONSUMER NOTICED THAT THE TAIL LIGHTS WERE INOPERATIVE. VEHICLE WAS TAKEN TO TH",
+            "match_text": "TAIL LIGHTS WERE INOPERATIVE"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-3ba426392b2ee02ad7a80badd065e7d582397e3a5a91ee395b62ee15140ba808",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "lighting_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "lighting_failure",
+            "variant_index": 0,
+            "rule_id": "lighting_failure:1",
+            "excerpt": "LY'S 2002 CHEVY MALIBU'S TURN SIGNAL FLASHERS ARE INTERMITENTLY FAILING. THE PROBLEM BEGAN YESTE",
+            "match_text": "TURN SIGNAL FLASHERS ARE INTERMITENTLY FAILING"
+          }
+        ]
+      }
+    ],
+    "failure_to_start": [
+      {
+        "complaint_id": "C-8d8ef686e4a90410fbf185fe87bedd95340ebe1187db61ae84d2eee6d8413000",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "failure_to_start"
+        ],
+        "evidence": [
+          {
+            "mode": "failure_to_start",
+            "variant_index": 0,
+            "rule_id": "failure_to_start:1",
+            "excerpt": "RAL OTHER OCCASIONS, THE CAR WOULD NOT START EVEN WITH A 1/4 TANK OF",
+            "match_text": "CAR WOULD NOT START"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-53c41ce0adbc2c5047602779f20f9170fe4581e447f11a563dae2e195c1706ed",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "engine_stall",
+          "failure_to_start"
+        ],
+        "evidence": [
+          {
+            "mode": "failure_to_start",
+            "variant_index": 0,
+            "rule_id": "failure_to_start:2",
+            "excerpt": "LE STALLED. CONSUMER WAS UNABLE TO RESTART VEHICLE, AND HADIT TOWED TO THE",
+            "match_text": "UNABLE TO RESTART VEHICLE"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-068ee6dc818176b9f5b392a8021ee8e14354b24ec7618c7ed88d07c37a2c5fdc",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "failure_to_start"
+        ],
+        "evidence": [
+          {
+            "mode": "failure_to_start",
+            "variant_index": 0,
+            "rule_id": "failure_to_start:1",
+            "excerpt": "VEHICLE DID NOT START WHEN THE KEY WAS INSERTE",
+            "match_text": "VEHICLE DID NOT START"
+          }
+        ]
+      }
+    ],
+    "rough_running": [
+      {
+        "complaint_id": "C-0b61e3ac4b86a88b50b6df15b18a1451be5782fb285ca13b5408b067d7191e2e",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "engine_stall",
+          "rough_running"
+        ],
+        "evidence": [
+          {
+            "mode": "rough_running",
+            "variant_index": 0,
+            "rule_id": "rough_running:2",
+            "excerpt": "STALLING INCIDENTS. (2) VEHICLE BEGAN HESITATING WHILE DOWNHILL ON A DRIV",
+            "match_text": "VEHICLE BEGAN HESITATING"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-35a7cd8128e1f5f42801fba5894374e314fb3e93f89ad94e15f71113602f0f4c",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "engine_stall",
+          "reduced_engine_power",
+          "rough_running"
+        ],
+        "evidence": [
+          {
+            "mode": "rough_running",
+            "variant_index": 0,
+            "rule_id": "rough_running:1",
+            "excerpt": "2 MPH. THE VAN SEEMED TO MISFIRE AND LUNGED. EVERYONE ASK",
+            "match_text": "MISFIRE"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-fc5b0ab1b912df02e7a2f63d2e2f4a2fe46c4a4d4610acf243ad555a999510d2",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "rough_running"
+        ],
+        "evidence": [
+          {
+            "mode": "rough_running",
+            "variant_index": 0,
+            "rule_id": "rough_running:1",
+            "excerpt": "D (OVER-RETARDED).\" WITH MISFIRES TO ALL CYLINDERS ON BANK",
+            "match_text": "MISFIRES"
+          }
+        ]
+      }
+    ],
+    "door_latch_failure": [
+      {
+        "complaint_id": "C-36f6983c3694d4401c448ad8a27420a2681feb22b9cfb90a71507e30697cd08e",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "door_latch_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "door_latch_failure",
+            "variant_index": 0,
+            "rule_id": "door_latch_failure:2",
+            "excerpt": "UNG OPEN IN PARKING LOT. DOOR WILL NOT CLOSE AT ALL AND IT WILL NOT LATCH, CAR IS NOT DRIVABLE. IT",
+            "match_text": "DOOR WILL NOT CLOSE AT ALL AND IT WILL NOT LATCH"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-ec08c867c717a1391ddd6dc399bc7f9e967a683d371884640fbb281d4ed0a964",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "door_latch_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "door_latch_failure",
+            "variant_index": 0,
+            "rule_id": "door_latch_failure:2",
+            "excerpt": "om the door. Because the tailgate would not latch, the interior lights sta",
+            "match_text": "tailgate would not latch"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-45cf856c3d8fd74ea282d6b4e546f85287359f2a824882aaf8e3d908345ef5d0",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "door_latch_failure"
+        ],
+        "evidence": [
+          {
+            "mode": "door_latch_failure",
+            "variant_index": 0,
+            "rule_id": "door_latch_failure:2",
+            "excerpt": "ESTIMATED SPEED 50 MPH, HOOD FLEW OPEN HITTING WINDSHIELD BLIND",
+            "match_text": "HOOD FLEW OPEN"
+          }
+        ]
+      }
+    ],
+    "electrical_power_loss": [
+      {
+        "complaint_id": "C-57fd02b5b6e7b852b519304210281593c342b8133fa3758055d2d2a5fea5bb9a",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "electrical_power_loss"
+        ],
+        "evidence": [
+          {
+            "mode": "electrical_power_loss",
+            "variant_index": 0,
+            "rule_id": "electrical_power_loss:3",
+            "excerpt": "T. UNABLE TO REMOVE KEY. BATTERY GOES DEAD. 2 GM DEALERSHIPS SAY TH",
+            "match_text": "BATTERY GOES DEAD"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-49dae52456416d8dac8b3c8c87e168b0b830eeeeaac7de1ea5530f4872a281bc",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "electrical_power_loss",
+          "abnormal_vibration"
+        ],
+        "evidence": [
+          {
+            "mode": "electrical_power_loss",
+            "variant_index": 0,
+            "rule_id": "electrical_power_loss:3",
+            "excerpt": "WHO THEN STATED THAT THE BATTERY WAS DEAD. THE BATTERY WAS RECHARG",
+            "match_text": "BATTERY WAS DEAD"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-8a530ad35768434ca9e66c0c0f5565d6a06967d6e67613320195618c137e7929",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "electrical_power_loss"
+        ],
+        "evidence": [
+          {
+            "mode": "electrical_power_loss",
+            "variant_index": 0,
+            "rule_id": "electrical_power_loss:3",
+            "excerpt": "OR NO REASON. MY CURRENT BATTERY IS 2 MONTHS OLD AND WAS STONE DEAD THIS MORNING(TUESDAY) IN",
+            "match_text": "BATTERY IS 2 MONTHS OLD AND WAS STONE DEAD"
+          }
+        ]
+      }
+    ],
+    "unintended_airbag_deployment": [
+      {
+        "complaint_id": "C-11313cf267b2ed7599714f964e9c1a9dbfc6b3f673a7e1b923ceb3d847c11dc9",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "unintended_airbag_deployment"
+        ],
+        "evidence": [
+          {
+            "mode": "unintended_airbag_deployment",
+            "variant_index": 0,
+            "rule_id": "unintended_airbag_deployment:2",
+            "excerpt": "MINOR POTHOLE THE FRONT AIR BAG UNEXPECTEDLY DEPLOYED. *NLM",
+            "match_text": "AIR BAG UNEXPECTEDLY DEPLOYED"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-1a17687230d38869218bd0ad0b2be56b4aead08d85e04ec90c7c6df069bb264f",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "unintended_airbag_deployment"
+        ],
+        "evidence": [
+          {
+            "mode": "unintended_airbag_deployment",
+            "variant_index": 0,
+            "rule_id": "unintended_airbag_deployment:1",
+            "excerpt": "OVER A POTHOLE. THE SIDE AIR BAGS DEPLOYED INADVERTENTLY. THE MANUFACTURER AND TH",
+            "match_text": "AIR BAGS DEPLOYED INADVERTENTLY"
+          }
+        ]
+      },
+      {
+        "complaint_id": "C-913a5e93d5933f6abf3c433d5c718ad3f578d888df147ff08b5926867bb28fa0",
+        "has_text_conflict": false,
+        "all_matched_modes": [
+          "unintended_airbag_deployment"
+        ],
+        "evidence": [
+          {
+            "mode": "unintended_airbag_deployment",
+            "variant_index": 0,
+            "rule_id": "unintended_airbag_deployment:2",
+            "excerpt": "VING AT 25 MPH, THE SIDE AIR BAGS INADVERTENTLY DEPLOYED. THE DRIVER SUSTAINED IN",
+            "match_text": "AIR BAGS INADVERTENTLY DEPLOYED"
+          }
+        ]
+      }
+    ]
+  },
+  "no_forced_class": [
+    {
+      "complaint_id": "C-fb37a11360c8242a924f09c17af8854d0f13ffbc3136cdba2430df7fade14325",
+      "has_text_conflict": false,
+      "excerpt": "HAND RAIL FAILED ON BUS NUMBER 127. (FOURTH VEHICLE ON 503019) *DSH"
+    },
+    {
+      "complaint_id": "C-8f63427124c338c699bcc7458c4fc38654e750f1bf6c9a700f9d298bd3380449",
+      "has_text_conflict": true,
+      "excerpt": "SEAT BACK LATCH BROKE, CAUSING SEAT TO RECLINE."
+    },
+    {
+      "complaint_id": "C-c844e11dd5c02c7408ebe78ac82d26aa96d52609d71385a5a12a5882022eaa41",
+      "has_text_conflict": false,
+      "excerpt": "ADHESIVE HOLDING HOOD TO FRAME FAILS, CAUSING DENTS IN HOOD. *DSH"
+    },
+    {
+      "complaint_id": "C-515f73b9cdca4e2471f419b06d3c0848b4ca86e1eed31d6b5c45f27dc559f055",
+      "has_text_conflict": false,
+      "excerpt": "SEAT BACK COLLAPSED DUE TO SHEERED BOLTS. *SD"
+    },
+    {
+      "complaint_id": "C-de4641dea0e67d5bdd5a76db338eefa391c707771f408bfa677492eb6138c12a",
+      "has_text_conflict": false,
+      "excerpt": "VEHICLE WAS HIT FROM THE BACK AND DRIVER SEATBACKK BROKE. EXPLAIN IN MORE DETAIL. *AK"
+    },
+    {
+      "complaint_id": "C-afe1719fe4fffb282efcc930d54c51484bc2db6d8066972e3b47d4575f9a70f5",
+      "has_text_conflict": false,
+      "excerpt": "CONSUMER RECEIVED RECALL LETTER # 95V103003. DEALER HAS NO PARTS, PLEASE DESCRIBE . *AK"
+    },
+    {
+      "complaint_id": "C-e59f3050f24ba512895341d0401b6b9a03def71dd3f0781031fb0b97c6c96b17",
+      "has_text_conflict": false,
+      "excerpt": "'COLD POWER STEERING'. *DH"
+    },
+    {
+      "complaint_id": "C-ca9bfbb601651224b69e304bf0d25548016e17cf4c3144147377dce5a3738428",
+      "has_text_conflict": false,
+      "excerpt": "STEERING REACHES A POINT OF RESISTANCE AND THEN SLIPS. DESCRIBE IN MORE DETAIL. *AK"
+    },
+    {
+      "complaint_id": "C-9714cf8577ab947b50984a3d856eb22d4da9d14c8d18ffdf507b91e45ae453d6",
+      "has_text_conflict": false,
+      "excerpt": "DUE TO THE ENGINE COOLING FAN BLADE BREAKAGE THE WATER PUMP WAS DAMAGED RECALL #93V00800. *AK"
+    },
+    {
+      "complaint_id": "C-4bf49a632c5b8613420321f12bfefad55200ceef3fc2eb0c8eb5103a6d202105",
+      "has_text_conflict": false,
+      "excerpt": "CAR WAS RUNNING FINE UNTIL RECALL WORK WAS DONE AND NOW THE CAR NO LONGER WORKS. PLEASE DESCRIBE. *AK"
+    },
+    {
+      "complaint_id": "C-c9432dcd516e229c64f4c7b9f37dd63e38f0e0df8a9cb0a918ced317aa206ec8",
+      "has_text_conflict": false,
+      "excerpt": "ABS, BRAKES MAKE A LOUD NOISE WHEN COMING TO A STOP, VEHICLE WILL JUMP WHEN COMING TO A STOP, ALSO REPLACED FRONT BRAKE PADS/ WINDSHIELD WIPR BLADE/REARVIEW MIRROR. *AK"
+    },
+    {
+      "complaint_id": "C-66a29171196684e89ef6135de5b4db2c8a36a293fe32a2490906dcdb9918003c",
+      "has_text_conflict": false,
+      "excerpt": "RADIATOR BASE COMPLETELY CORRODED, RESULTING IN LEAKS. *AK"
+    }
+  ],
+  "conflict_examples": [
+    {
+      "complaint_id": "C-8f63427124c338c699bcc7458c4fc38654e750f1bf6c9a700f9d298bd3380449",
+      "variant_count": 2,
+      "variant_mode_sets": [
+        [],
+        []
+      ],
+      "combined_modes": [],
+      "variant_excerpts": [
+        "SEAT BACK LATCH BROKE, CAUSING SEAT TO RECLINE.",
+        "SEAT TRACK BROKEN, CAUSING DRIVERS SEAT TO SLIDE FORWARD WHEN BRAKING/BACKWARD WHEN STARTING. *DSH"
+      ]
+    },
+    {
+      "complaint_id": "C-840eb99a7a87fb0ae2ed2879f498d031466bcaf86e81fd7e86e78728419390ce",
+      "variant_count": 2,
+      "variant_mode_sets": [
+        [],
+        [
+          "steering_loss"
+        ]
+      ],
+      "combined_modes": [
+        "steering_loss"
+      ],
+      "variant_excerpts": [
+        "CALIPER MOUNTING BOLTS STRIPPED.",
+        "STEERING KNUCKLES FAILED. *DH"
+      ]
+    },
+    {
+      "complaint_id": "C-dbaf25e732743b155d304e1835c9dbf0b473514669c5003ecd50e8d2c52a511e",
+      "variant_count": 2,
+      "variant_mode_sets": [
+        [],
+        []
+      ],
+      "combined_modes": [],
+      "variant_excerpts": [
+        "DRIVING VEHICLE, MAKING RIGHT TURN, ANOTHER VEHICLE HIT R/R BUMPER, SPINNED VEHICLE AROUND, DRIVER/PASSENGER SEATBACKS COLLAPSED BACKWARDS ONTO REAR SEAT. *AK",
+        "DRIVING VEHICLE, MAKING RIGHT TURN, ANOTHER VEHICLE HIT R/R BUMPER, SPINNED VEHICLE AROUND, DRIVER/PASSENGER SEATBACKS COLLAPSED BACKWARDS ONTO REAR SEAT. *AK *SLC"
+      ]
+    },
+    {
+      "complaint_id": "C-3eb75706f5fd274835872918c7fbcb47cc1d8f6938b008af6366076bd1e5e100",
+      "variant_count": 2,
+      "variant_mode_sets": [
+        [],
+        []
+      ],
+      "combined_modes": [],
+      "variant_excerpts": [
+        "DRIVER'S SIDE SEAT BELT WILL NOT UNBUCKLE. *AK",
+        "DRIVER'S SIDE SEAT BELT WILL NOT UNBUCKLE. PLEASE DESCRIBE DETAILS. *AK"
+      ]
+    },
+    {
+      "complaint_id": "C-63c83eb5c410ca40880029e5e59d91c8c14950fe2035f4d68101867f810856f5",
+      "variant_count": 3,
+      "variant_mode_sets": [
+        [
+          "restraint_failure"
+        ],
+        [],
+        []
+      ],
+      "combined_modes": [
+        "restraint_failure"
+      ],
+      "variant_excerpts": [
+        "SEAT BELT FAILURE--RECALL, BUT PARTS NOT AVAILABLE.",
+        "THE DRIVER'S SIDE BELT FAILED PRIOR TO RECALL.",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "complaint_id": "C-8b508c40b4e4400d85fa095615f45e05f3f54ca2147dfbfcacbebdaae2913657",
+      "variant_count": 3,
+      "variant_mode_sets": [
+        [
+          "loss_of_braking"
+        ],
+        [],
+        []
+      ],
+      "combined_modes": [
+        "loss_of_braking"
+      ],
+      "variant_excerpts": [
+        "BRAKES FAILED.",
+        "PASSENGER'S FRONT/MIDDLE SEATS BELTS FAILED.",
+        "RIGHT REAR PANEL WELD FAILED, CAUSING WATER TO LEAK."
+      ]
+    },
+    {
+      "complaint_id": "C-29401fc72af561b81f5ffa789b06320e7b6ce05ec2d0c7941e87e8225ab1b6b8",
+      "variant_count": 2,
+      "variant_mode_sets": [
+        [],
+        []
+      ],
+      "combined_modes": [],
+      "variant_excerpts": [
+        "CRUISE CONTROL FAILED. YH",
+        "DOOR LOCKS INOPERABLE. YH"
+      ]
+    },
+    {
+      "complaint_id": "C-bb1568bbc137f78fc2018dc43ec243d781f2f383df2db89fa5351dc8778b190f",
+      "variant_count": 2,
+      "variant_mode_sets": [
+        [],
+        []
+      ],
+      "combined_modes": [],
+      "variant_excerpts": [
+        "IGNITION SWITCH WENT OUT ONE WEEK AFTER OWNERSHIP. *MJS",
+        "THE TRUNK LOCK WILL NOT RELEASE. *MJS"
+      ]
+    }
+  ],
+  "negation_examples": [
+    {
+      "complaint_id": "C-5802fd949503ecbd683999945d4bebf23745012acdaca4944562e2bfefc5aaa0",
+      "all_matched_modes": [
+        "airbag_non_deployment"
+      ],
+      "excerpt": "N DIRECTLY IN FRONT OF ISUZU, WAS NOT ENOUGH ROOM FOR BRAKING, ISUZU HIT VEHICLE, AIRBAGS DID NOT DEPLOY ON IMPACT, *AK"
+    },
+    {
+      "complaint_id": "C-d447743171773e69729ad98601a05e574ed4caa9a2b1447f998bb015c1494d16",
+      "all_matched_modes": [
+        "airbag_non_deployment"
+      ],
+      "excerpt": "OUT 40MPH WHEN DRIVER LOST CONTROL OF VEHICLE & HIT TELEPHONE POLE. DRIVER'S SIDE AIR BAG DID NOT DEPLOY UPON IMPACT BUT PASSENGER SIDE AIR BAG DID DEPLOY. AIR BAG DEPLOYED AFTER DRIVER LEFT VEHICLE. VEHI"
+    },
+    {
+      "complaint_id": "C-7dbd373d6af04928e251eb77e111805e53a2c109a4d87f8d66b7d930efae2377",
+      "all_matched_modes": [
+        "airbag_non_deployment"
+      ],
+      "excerpt": "R, AND THE OTHER CAR WAS GOING ABOUT 25 MILES PER HOUR. THE FAILURE WAS THAT THE AIR BAGS DID NOT DEPLOY. OFFICER PETERSON FROM THE MEADVILLE CITY POLICE FILED THE ACCIDENT REPORT. THE ACCIDENT HAPPENED A"
+    },
+    {
+      "complaint_id": "C-46b04d3262c72b07807f3dcee5d8754c2ab3d8b0b3401dea53935a7041c9ab14",
+      "all_matched_modes": [
+        "airbag_non_deployment"
+      ],
+      "excerpt": "T APPROXIMATELY 40 MPH AND HIT ANOTHER VEHICLE WITH FRONT END. UPON IMPACT, ,DUAL AIRBAGS DID NOT DEPLOY WHICH COULD HAVE CAUSED INJUIRES.NO INDICATION OF DEFECT. *AK"
+    },
+    {
+      "complaint_id": "C-1ca3d1c0ffae580af09949ca92c4569c8e19c86b6c85b212d38d9ed2cd92526a",
+      "all_matched_modes": [
+        "airbag_non_deployment"
+      ],
+      "excerpt": " TRICKLE OF FIRE UNDER THE HOOD. TWO MINUTES LATER, THE WHOLE CAR WAS IN FLAMES. AIR BAGS DID NOT DEPLOY AT IMPACT. *AK *ML"
+    },
+    {
+      "complaint_id": "C-b75cfe7dbda591ac87471a82e7aa143319e11b072619bbc23e2223be68404d43",
+      "all_matched_modes": [
+        "fire_smoke"
+      ],
+      "excerpt": "S SUCH AS A WATER PUMP FALL OF 2000, BRAKE WORK SUMMER OF 200, FUEL PUMP JANUARY OF 1999. NO WARNING LIGHTS CAME ON OR DID ANY GAUGES REFLECT ANY PROBLEMS. IT DISTRESSES ME GREATLY THAT I MAY NEVER KN"
+    },
+    {
+      "complaint_id": "C-563554b30e6235283f1e6ace754451eecdd105db29f0151edfd7ff8acdf8c59e",
+      "all_matched_modes": [
+        "engine_stall"
+      ],
+      "excerpt": "ING CAUSED A HOLE TO WEAR THROUGH THE FUEL LINE. DIESEL FUEL WAS SPRAYED ONTO THE ENGINE (NO FIRE). THE CAR STALLED IN TRAFFIC, IN THE MIDDLE OF MAKING A LEFT HAND TURN. THE VEHICLE WAS ALMOST REAR"
+    },
+    {
+      "complaint_id": "C-e9465c742629d7370ec2b94ea63f98b8867f990ae90ee6ad64250c78c300e951",
+      "all_matched_modes": [
+        "airbag_non_deployment"
+      ],
+      "excerpt": "MR.GERALD LOTTO IS AN ATTORNEY ON BEHALF OF SHERRI CAPONE STATING THAT AIR BAGS DID NOT DEPLOY DURING A COLLISION. THERE WAS DAMAGE TO THE FRONT OF THE VEHICLE AND MS. CAPONE SUSTAINED EXTENSIVE"
+    },
+    {
+      "complaint_id": "C-ae890b2b41f9d1e9f5954c4a85ac9cd146873560b5173a3cc93f87ea94e43435",
+      "all_matched_modes": [],
+      "excerpt": "CONSUMER STATES THAT WHILE DRIVING AT ANY SPEED AND WITH NO WARNING EHICLE WILL SHUT OFF, CAUSING CONSUMER TO PULL OVER, AND IT WILL BE HARD TO GET THE VEHICLE BACK ST"
+    },
+    {
+      "complaint_id": "C-e52efa56cc2420e3f25ef5ce8adacc112d1f40aa10792e95b5152fa957c293b1",
+      "all_matched_modes": [
+        "tire_failure"
+      ],
+      "excerpt": "WHILE DRIVING AT 50 MPH ON THREE DIFFERENT OCCASIONS AND WITH NO WARNING TREAD SEPARATED FROM THE TIRES, CONSUMER HAD TO PULL OVER THE ROAD. RADIAL, LONG TALL, SIZE LT265/7"
+    },
+    {
+      "complaint_id": "C-70d50b649013aaef3ae897fa333d2cd450fec0b2125edc903321b6732db00fdf",
+      "all_matched_modes": [
+        "airbag_non_deployment"
+      ],
+      "excerpt": "THE SIDE AIR BAGS DID NOT DEPLOY. THE VEHICLE WAS BROADSIDED ON THE DRIVERS SIDE. *SC *JB"
+    },
+    {
+      "complaint_id": "C-4469a874bed7902540ff8e30e6c3edbdf9f0231ec6664242eabea037d6ee0145",
+      "all_matched_modes": [
+        "airbag_non_deployment"
+      ],
+      "excerpt": "HE CONSUMER'S VEHICLE WAS INVOLVED IN A FRONT IMPACT AT 18 MPH. UPON IMPACT, THE AIR BAGS DID NOT DEPLOY. THE CONSUMER CONTACTED THE MANUFACTURER. *AK *SC *JB"
+    }
+  ]
+}
